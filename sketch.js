@@ -1,3 +1,4 @@
+
 var canvas, backgroundImage;
 
 var gameState = 0;

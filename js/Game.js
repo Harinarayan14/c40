@@ -44,6 +44,7 @@ class Game {
     form.hide();
     
     Player.getPlayerInfo();
+    player.getCarsAtEnd();
     
     if(allPlayers !== undefined){
       background(rgb(198,135,103));
@@ -93,6 +94,10 @@ class Game {
 
     if(player.distance > 3860){
       gameState = 2;
+      player.rank += 1;
+      Player.updateEnd(player.rank);
+      textSize(30);
+      text("GameOver!      Rank :" +player.rank,displayWidth/2,-displayHeight*4 - 100 );
     }
    
     drawSprites();
